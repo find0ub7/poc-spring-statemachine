@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-node('jdk11') {
+node {
     if (env.jobType == "pipeline") {
         echo 'Pipeline steps called'
     } else if (env.jobType == "production") {
