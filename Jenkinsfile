@@ -7,6 +7,8 @@ node {
     } else {
         echo 'Pull Request steps called!'
         stage("Unit Test") {
+            sh "export MAVEN_HOME=/opt/maven
+            sh "export PATH=$PATH:$MAVEN_HOME/bin"
             sh "echo Maven Version && mvn --version"
             sh "echo Java Version && java -version"
         }
