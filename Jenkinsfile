@@ -5,7 +5,7 @@ node {
     } else if (env.jobType == "production") {
         echo 'Production steps called'
     } else {
-        echo 'Pull Request steps called X'
+        echo 'Pull Request steps called Y'
         stage("Build PR") {
             sh "echo call maven clean install here"
             sh "echo Maven Version && /usr/share/maven/bin/mvn --version"
