@@ -6,8 +6,9 @@ if (env.jobType == "pipeline") {
     echo 'Production steps called'
 } else {
     echo 'Pull Request steps called!'
-    stage("Unit Test") {
+    stage("Build PR") {
         sh "echo Maven Version && mvn --version"
         sh "echo Java Version && java -version"
+        sh "mvn clean install"
     }
 }
