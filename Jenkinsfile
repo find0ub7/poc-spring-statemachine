@@ -7,7 +7,7 @@ node {
     } else {
         echo 'Pull Request steps called!'
         stage("Unit Test") {
-            sh "echo Maven Version && /usr/bin/mvn --version"
+            sh "echo Maven Version && /usr/share/maven --version"
             sh "echo Java Version && java -version"
         }
     }
